@@ -1,4 +1,4 @@
-# bofwalkthrough
+# bof walkthrough
 CONNECT  
 #!/usr/bin/python  
 
