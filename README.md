@@ -9,15 +9,12 @@ try:
          s.connect(('IP',PORT))            # connect to IP, port  
          data = s.recv(1024)                     # receive banner  
          print data                              # print banner  
- 
          s.send('USER test' +'\r\n')             # send username "test"  
          data = s.recv(1024)                     # receive reply  
          print data                              # print reply  
- 
          s.send('PASS test\r\n')                 # send password "test"  
          data = s.recv(1024)                     # receive reply  
          print data                              # print reply  
- 
          s.close()                               # close socket  
          print "\nDone!"  
 except:  
@@ -117,15 +114,12 @@ try:
     s.connect(('IP',PORT))  
     data = s.recv(1024)  
     print data  
-
     s.send('USER test' +'\r\n')  
     data = s.recv(1024)  
     print data  
-
     s.send('PASS ' + buf + '\r\n')  
     data = s.recv(1024)  
     print data  
-
     s.close()  
     print "\nDone!"  
 
