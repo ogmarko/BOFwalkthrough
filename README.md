@@ -1,4 +1,6 @@
-# bof walkthrough
+# bof walkthrough  
+(Best intro walkthrough: https://github.com/justinsteven/dostackbufferoverflowgood)  
+
 CONNECT  
 #!/usr/bin/python  
 
